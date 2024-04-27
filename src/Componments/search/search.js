@@ -27,7 +27,7 @@ const Search = ({ onSearchChange }) => {
     };
     const detectLocation = () => {
         alert("jjjd")
-        if (navigator.geolocation) {
+       
             navigator.geolocation.getCurrentPosition(
                 (position) => {
                     const { latitude, longitude } = position.coords;
@@ -42,9 +42,6 @@ const Search = ({ onSearchChange }) => {
                     console.error("Error getting location:", error);
                 }
             );
-        } else {
-            console.error("Geolocation is not supported by this browser.");
-        }
     };
     const handleChange = (searchData) => {
         setSearch(searchData);
