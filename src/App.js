@@ -48,19 +48,17 @@ function App() {
           borderRadius: "10px",
           boxShadow:
             "rgb(200 200 200 / 30%) 0px 1px 2px 0px, rgb(200 200 200 / 15%) 0px 1px 3px 1px",
-      
-          //maxWidth: "1100px!important",
+          maxWidth: "1100px!important",
           margin: "auto",
         }}
-        maxWidth="sm"
       >
         <Grid item xs={12}>
           <Search onSearchChange={onSearchChange} />
         </Grid>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={6} >
           {currentWeather && <TodayWeather data={currentWeather} />}
         </Grid>
-       <Grid item xs={12} md={6}>
+       <Grid item xs={12} md={6} pt={{xs:5}}>
           {currentForecast && <ForeCast data={currentForecast} />}
       </Grid>
       </Grid>

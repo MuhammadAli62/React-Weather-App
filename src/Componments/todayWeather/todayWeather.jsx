@@ -17,7 +17,7 @@ const TodayWeather = ({ data }) => {
     let date = new Date(data.dt  * 1000)
        
     return (
-        <Stack direction="column" maxWidth={{ xs: "100%", sm: "100%" }} >
+        <Stack direction="column" maxWidth={{ xs: "100%", sm: "95%" }} pt={5} >
              <Typography variant="h6" component="p">CURRENT WEATHER</Typography>
             <Stack direction={{xs:"column", sm:"row"}} justifyContent="space-between" alignItems="center">
                 <Box sx={{
@@ -33,7 +33,7 @@ const TodayWeather = ({ data }) => {
                 <Box component="div">
                     <Typography variant="h2" component="h3">{Math.round(data.main.temp)}°C</Typography>
                     <Typography variant="subtitle1" component="p" textAlign="center">{data.weather[0].main}</Typography>
-                    <Typography variant="h6" component="p" textAlign="center">AIR CONDITIONS</Typography>
+                    <Typography variant="h6" component="p"  pt={4} textAlign="center">AIR CONDITIONS</Typography>
                 </Box>
                 <Divider orientation="vertical" flexItem sx={{margin:"0 10px"}}/>
                 <Stack gap={0.2} width="100%">
