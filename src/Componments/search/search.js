@@ -26,6 +26,7 @@ const Search = ({ onSearchChange }) => {
         }
     };
     const detectLocation = () => {
+        alert("jjjd")
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
