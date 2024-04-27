@@ -25,11 +25,11 @@ function App() {
         const currentWeatherData = weatherResponse.data;
         setcurrentWeather(currentWeatherData);
 
-        /*const foreCastResponse = await axios.get(
+        const foreCastResponse = await axios.get(
           `${WEATHER_API_URL}/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&appid=1fa9ff4126d95b8db54f3897a208e91c&units=metric`
         );
         const forecastData = foreCastResponse.data;
-        setcurrentForecast(forecastData);*/
+        setcurrentForecast(forecastData);
       } catch (error) {
         console.log(error);
       }
@@ -60,9 +60,9 @@ function App() {
         <Grid item xs={12} md={12}>
           {currentWeather && <TodayWeather data={currentWeather} />}
         </Grid>
-       {/*<Grid item xs={12} md={6}>
+       <Grid item xs={12} md={6}>
           {currentForecast && <ForeCast data={currentForecast} />}
-      </Grid>*/}
+      </Grid>
       </Grid>
 
     </ThemeProvider>
